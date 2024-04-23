@@ -3,17 +3,15 @@ export const initialState = {
   username: "",
   password: "",
   email: "",
-  profilePicture: ""
+  profilePicture: "",
 };
 
 const AuthReducer = (state, action) => {
-  const {type, payload} = action;
+  const { type, payload } = action;
 
   switch (type) {
     case "change_input_value":
-      return {
-        state: payload.newstate
-      };
+      return payload.newstate;
     default:
       throw new Error("Invalid");
   }

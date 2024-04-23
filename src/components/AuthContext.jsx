@@ -11,16 +11,16 @@ const Authprovider = ({ children }) => {
 
     console.log(updatedstate);
     updatedstate = { ...updatedstate, [event.target.name]: event.target.value };
-    console.log("jhghjgjgh" + updatedstate);
+
     dispatch({
       type: "change_input_value",
-      payload: { newstate: updatedstate }
+      payload: { newstate: updatedstate },
     });
   };
 
   const Authcontextvalue = {
     Changevalues,
-    state
+    state,
   };
 
   return (
